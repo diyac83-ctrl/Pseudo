@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo Classes</title>
+
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #222222;
+            margin: 0;
+            padding-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #253b80;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 18px 25px;
+            display: block;
+        }
+
+        nav a.active {
+            background-color: #2563eb;
+        }
+
+        nav a:hover {
+            background-color: #16a34a;
+        }
+
+        nav a:active {
+            background-color: #0f172a;
+        }
+
+        /* Page Elements and Spacing */
+        #home, #about, #services, #contact {
+            margin: 45px auto;
+            text-align: center;
+        }
+
+        /* Headings */
+        h2 {
+            font-size: 20px;
+            color: #253b80;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        /* Get Started Button */
+        button {
+            background-color: #2563eb;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #16a34a;
+        }
+
+        /* Input Boxes */
+        input {
+            padding: 10px;
+            border: 2px solid #cccccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+            outline: none;
+        }
+
+        /* Services List */
+        ul {
+            padding: 0;
+            list-style: none;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        li {
+            padding: 12px;
+            margin-bottom: 5px;
+            background-color: #f1f5f9;
+        }
+
+        li:nth-child(even) {
+            background-color: #bfdbfe;
+        }
+
+        /* Invalid Email Input */
+        form input:invalid {
+            border: 2px solid #dc2626;
+        }
+
+        form input:valid {
+            border: 2px solid #16a34a;
+        }
+
+        /* Students Table */
+        table {
+            width: 80%;
+            max-width: 700px;
+            margin: 0 auto 45px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #dddddd;
+        }
+
+        th {
+            background-color: #253b80;
+            color: white;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #dbeafe;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f0fdf4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Get Started Button -->
+    <div id="home">
+        <button>Get Started</button>
+    </div>
+
+    <!-- Name Input -->
+    <div id="about">
+        <input type="text" placeholder="Enter your name">
+    </div>
+
+    <!-- Services List -->
+    <div id="services">
+        <h2>Services Provided</h2>
+
+        <ul>
+            <li>Web Design</li>
+            <li>Graphic Design</li>
+            <li>HTML</li>
+            <li>Javascript</li>
+            <li>CSS</li>
+        </ul>
+    </div>
+
+    <!-- Contact Form -->
+    <div id="contact">
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Students Details Table -->
+    <div>
+        <h2>Students Details</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Marks</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Diya</td>
+                    <td>HTML</td>
+                    <td>100</td>
+                </tr>
+
+                <tr>
+                    <td>Rahul</td>
+                    <td>CSS</td>
+                    <td>90</td>
+                </tr>
+
+                <tr>
+                    <td>Priya</td>
+                    <td>Javascript</td>
+                    <td>88</td>
+                </tr>
+
+                <tr>
+                    <td>Aman</td>
+                    <td>HTML</td>
+                    <td>78</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
